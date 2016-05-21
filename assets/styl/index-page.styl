@@ -1,12 +1,57 @@
 @require 'common'
 
-.post-list .post-title {
-    font-family: 'Roboto Slab', serif;
-    font-weight: weight-thin;
-    font-size: 32px;
-    line-height: 48px;
+.post-list {
+    padding-top: 40px;
+    & .post-title {
+        font-family: 'Roboto Slab', serif;
+        font-weight: weight-thin;
+        font-size: 32px;
+        line-height: 48px;
 
-    a {
-        color: color-red;
+        a {
+            color: color-red;
+        }
+    }
+
+    & .post {
+        position: relative;
+        width: 80%;
+        max-width: 710px;
+        margin: 20px auto 0 auto;
+        padding-bottom: 4rem;
+        word-wrap: break-word;
+    }
+
+    .post-date {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 25px;
+        white-space: nowrap;
+        color: color-light-grey;
+        font-weight: weight-medium;
+        margin-left: 6px;
+        //text-transform: uppercase;
+    }
+
+    .post-tags {
+        display: inline-block;
+        color: color-orange;
+        font-weight: weight-medium;
+        font-size: 15px;
+        line-height: 25px;
+        text-transform: uppercase;
+        a {
+            color: color-orange;
+            text-decoration: none;
+        }
+    }
+}
+
+.main-header {
+    height: 500px;
+    & .on-image-logo {
+        position: relative;
+        left: 50px;
+        bottom: -443px;
     }
 }
