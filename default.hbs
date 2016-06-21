@@ -19,7 +19,7 @@
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/generated/index.css"}}" />
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300|Raleway:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Raleway:400,500,700' rel='stylesheet' type='text/css'>
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
@@ -36,33 +36,41 @@
 
         {{!-- The tiny footer at the very bottom --}}
         <footer class="site-footer clearfix">
-            <section class="copyright">
-                <h3>Formalities</h3>
-                This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">text</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.emilcardell.com" property="cc:attributionName" rel="cc:attributionURL">Emil Cardell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-                Disclaimer text. Not the opinions of my employer. The stories are not about you.
-            </section>
+            <div class="footer-content">
+                <div class="footer-row">
+                    <section class="copyright">
+                        <h3 class="footer-content__header">Good things to know</h3>
+                        <p  class="footer-content__content">The <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">text</span> on this blog by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.emilcardell.com" property="cc:attributionName" rel="cc:attributionURL">Emil Cardell</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<p>
+                    </section>
 
-            {{#if @labs.subscribers}}
-            <section>
-                    <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
-            </section>
-            {{/if}}
+                    {{#if @labs.subscribers}}
+                    <section class="footer-subsubscribe">
+                        <a class="subscribe-button waves-effect" href="{{@blog.url}}/subscribe/">Subscribe</a>
+                    </section>
+                    {{/if}}
+                </div>
+                <div class="footer-row">
+                    <section class="bottom-navigation">
+                        <h3 class="footer-content__header">Navigation</h3>
+                        {{navigation}}
+                    </section>
 
-            <section>
-                {{navigation}}
-            </section>
-
-            <section>
-                <a href="#">Github</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </section>
+                    <section class="social-media">
+                        <h3 class="footer-content__header">Me on the internets</h3>
+                        <a class="social-media__link" href="#">Github</a>
+                        <a class="social-media__link" href="#">Twitter</a>
+                        <a class="social-media__link" href="#">Instagram</a>
+                    </section>
+                </div>
+            </div>
         </footer>
 
     </div>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset "js/waves.js"}}"></script>
 
 </body>
 </html>

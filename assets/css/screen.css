@@ -1189,9 +1189,6 @@ body.nav-opened .site-wrapper {
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.3rem;
-    color: #9EABB3;
     text-align: center;
 }
 
@@ -1316,43 +1313,6 @@ body.nav-opened .site-wrapper {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     line-height: 1.4em;
-}
-
-/* ==========================================================================
-   11. Footer - The bottom of every page
-   ========================================================================== */
-
-.site-footer {
-    position: relative;
-    margin: 8rem 0 0 0;
-    padding: 1rem 15px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1rem;
-    line-height: 1.75em;
-    color: #BBC7CC;
-}
-
-.site-footer a {
-    color: #BBC7CC;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.site-footer a:hover {
-    border-bottom: #bbc7cc 1px solid;
-}
-
-.poweredby {
-    display: block;
-    width: 45%;
-    float: right;
-    text-align: right;
-}
-
-.copyright {
-    display: block;
-    width: 45%;
-    float: left;
 }
 
 
