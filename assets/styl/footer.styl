@@ -32,10 +32,21 @@
 .copyright {
     width: 60%;
     float: left;
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .footer-subsubscribe {
     float: right;
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 90%;
+        margin: 0 auto 25px auto;
+        padding-top: 10px;
+    }
 }
 
 .subscribe-button {
@@ -51,6 +62,11 @@
     background-color: color-orange;
     color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+    }
+
     &:hover {
         box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
         color: #fff;
@@ -61,6 +77,11 @@
 .bottom-navigation {
     float:left;
     width: 30%;
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 90%;
+        margin: 0 auto 50px auto;
+    }
     & .nav {
         border: none;
         padding: 0;
@@ -88,6 +109,11 @@
     float:left;
     width: 30%;
     margin-left: 5%;
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+    }
     &__link {
         text-decoration: none;
         font-size: 14px;
