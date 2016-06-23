@@ -3,12 +3,19 @@
 
 {{!-- The big featured header --}}
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-    <img src="{{asset "imgs/emil-cardell-white.svg"}}" class="on-image-logo" />
+    <div class="on-image-logo__wrapper">
+        <img src="{{asset "imgs/emil-cardell-white.svg"}}" class="on-image-logo__image" />
+    </div>
 </header>
+<div class="nav" id="nav">
+    <div class="nav__logo nav__logo--hidden" id="logo" >
+        <img src="{{asset "imgs/emil-cardell-black.svg"}}" />
+    </div>
 {{navigation}}
+</div>
 
 {{!-- The main content area on the homepage --}}
-<main id="content" class="content post-list" role="main">
+<main id="content" class="content" role="main">
 
     {{!-- The tag below includes the post loop - partials/loop.hbs --}}
     {{> "loop"}}

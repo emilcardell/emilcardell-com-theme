@@ -1,7 +1,12 @@
 @require 'common'
 
-.post-list {
+.content {
     padding-top: 40px;
+
+    @media only screen and (max-width: 500px) {
+        margin: 0 20px;
+    }
+
     & .post-title {
         font-family: 'Roboto Slab', serif;
         font-weight: weight-thin;
@@ -30,7 +35,22 @@
         color: color-light-grey;
         font-weight: weight-medium;
         margin-left: 6px;
-        //text-transform: uppercase;
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+
+        &--top {
+            display: none;
+            @media only screen and (max-width: 500px) {
+                display: block;
+                font-size: 12px;
+                line-height: 25px;
+                white-space: nowrap;
+                color: color-light-grey;
+                font-weight: weight-medium;
+                margin-left: 0;
+            }
+        }
     }
 
     .post-tags {
@@ -48,10 +68,31 @@
 }
 
 .main-header {
-    height: 500px;
+    height: 400px;/*230px*/
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: 500px) {
+        height: 230px;
+    }
     & .on-image-logo {
-        position: relative;
-        left: 50px;
-        bottom: -443px;
+        &__wrapper {
+            position: relative;
+            left: 50px;
+            bottom: -343px;
+            @media only screen and (max-width: 500px) {
+                left: 0;
+                bottom: -173px;
+            }
+        }
+
+        &__image {
+            @media only screen and (max-width: 500px) {
+                display: block;
+                margin: 0 auto;
+            }
+
+        }
     }
 }

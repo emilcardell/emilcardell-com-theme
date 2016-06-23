@@ -5,6 +5,9 @@
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    -webkit-transform: translate3d(0,0,0);
+    transition: top 0.3s ease-in-out;
+
     a {
         text-decoration: none;
         font-weight: weight-bold;
@@ -15,4 +18,56 @@
             color: color-orange;
         }
     }
+
+    &__logo {
+        position: absolute;
+        left: 50px;
+        -webkit-animation: fadeInFromNone 0.5s ease-out;
+        -moz-animation: fadeInFromNone 0.5s ease-out;
+        -o-animation: fadeInFromNone 0.5s ease-out;
+        animation: fadeInFromNone 0.5s ease-out;
+        opacity: 1;
+        display: block;
+        @media only screen and (max-width: 500px) {
+            left: 0;
+            position: relative;
+            padding: 6px 0 20px 0;
+            background: #fff;
+            width: 100%;
+            border-bottom: 1px solid color-light-grey;
+            margin-bottom: 18px;
+        }
+
+        &--hidden {
+            opacity: 0;
+            display: none;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        top: -153px;
+    }
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        @media only screen and (max-width: 500px) {
+        }
+    }
+
+    &--fixed-hidden {
+        position: fixed;
+        top: -72px;
+        width: 100%;
+        z-index: 1000;
+        @media only screen and (max-width: 500px) {
+            top: -153px;
+        }
+    }
+
+}
+
+.content-with-sticky-menu {
+    padding-top: 112px;
 }

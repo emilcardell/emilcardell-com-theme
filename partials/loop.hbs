@@ -7,7 +7,7 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
     <header class="post-header">
-
+        <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
         <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
 
