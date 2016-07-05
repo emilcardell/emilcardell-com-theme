@@ -1,0 +1,147 @@
+.post-template {
+    & .post {
+        max-width: 520px;
+    }
+
+    & .post-content {
+        margin-top: 32px;
+    }
+
+    & p {
+        margin-bottom: 32px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+
+    .post-content img {
+        display: block;
+        max-width: 105%;
+        height: auto;
+        padding: 0.6em 0;
+        /* Centers an image by (1) pushing its left edge to the
+           center of its container and (2) shifting the entire image
+           in the opposite direction by half its own width.
+           Works for images that are larger than their containers. */
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%); /* for Safari and iOS */
+        -ms-transform: translateX(-50%); /* for IE9 */
+        transform: translateX(-50%);
+    }
+
+    code, tt {
+        display: block;
+        padding: 5px 10px;
+        font-family: Inconsolata, monospace, sans-serif;
+        font-size: 0.85em;
+        white-space: pre-wrap;
+        border: #E3EDF3 1px solid;
+        background: #F7FAFB;
+        border-radius: 2px;
+        -webkit-font-feature-settings: "liga" 0;
+        -moz-font-feature-settings: "liga" 0;
+        font-feature-settings: "liga" 0;
+        margin: 30px 0;
+    }
+
+    & h3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    & h2 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+}
+
+.read-next {
+    border-top: 1px solid color-light-grey;
+    padding: 25px 0 25px 0;
+
+    & .read-next-story .prev{
+        margin-top: 40px;
+    }
+    &__header {
+        font-family: 'Roboto Slab', serif;
+        font-weight: weight-bold;
+        font-size: 16px;
+        line-height: 32px;
+        color: color-grey;
+    }
+
+    & .post-title {
+        font-family: 'Roboto Slab', serif;
+        font-weight: weight-thin;
+        font-size: 32px;
+        line-height: 48px;
+
+        a {
+            color: color-red;
+        }
+    }
+
+    & .post {
+        position: relative;
+        width: 80%;
+        max-width: 520px;
+        margin: 20px auto 0 auto;
+        padding-bottom: 4rem;
+        word-wrap: break-word;
+    }
+
+    .post-date {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 25px;
+        white-space: nowrap;
+        color: color-light-grey;
+        font-weight: weight-medium;
+        margin-left: 6px;
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+
+        &--top {
+            display: none;
+            @media only screen and (max-width: 500px) {
+                display: block;
+                font-size: 12px;
+                line-height: 25px;
+                white-space: nowrap;
+                color: color-light-grey;
+                font-weight: weight-medium;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .post-tags {
+        display: inline-block;
+        color: color-orange;
+        font-weight: weight-medium;
+        font-size: 15px;
+        line-height: 25px;
+        text-transform: uppercase;
+        a {
+            color: color-orange;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+        max-width: 520px;
+    }
+
+    &__image {
+        width: 200px;
+        height: 80px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+}

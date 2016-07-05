@@ -23,11 +23,13 @@
     <article class="{{post_class}}">
 
         <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
+            <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
+            <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
         </header>
+        <section class="post-excerpt">
+            <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+        </section>
 
         <section class="post-content">
             {{content}}
@@ -38,21 +40,33 @@
 
 {{!-- Links to Previous/Next posts --}}
 <aside class="read-next">
-    <h3>Wait. Ther is more</h3>
-    {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post-list-item">
-            <h2>{{title}}</h2>
-        </section>
-    </a>
-    {{/next_post}}
-    {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post-list-item">
-            <h2>{{title}}</h2>
-        </section>
-    </a>
-    {{/prev_post}}
+    <div class="read-next__content">
+        <h3 class="read-next__header">Wait. Ther is more</h3>
+        {{#next_post}}
+        <div class="read-next-story"  href="{{url}}">
+            <header class="post-header">
+                <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
+                <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
+            </header>
+            <section class="post-excerpt">
+                <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+            </section>
+        </div>
+        {{/next_post}}
+        {{#prev_post}}
+        <div class="read-next-story prev" href="{{url}}">
+            <header class="post-header">
+                <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
+                <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
+            </header>
+            <section class="post-excerpt">
+                <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+            </section>
+        </div>
+        {{/prev_post}}
+    </div>
 </aside>
 
 {{/post}}
