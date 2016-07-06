@@ -13,6 +13,24 @@
 
     .post-content {
         font-size: 16px;
+        &__date {
+            color: color-grey;
+        }
+
+        &__sharp {
+            color: color-red;
+        }
+
+        & a {
+            border-bottom: 1px dotted color-light-grey;
+            color: color-red;
+            text-decoration: none;
+            &:hover {
+                color: #fff;
+                background-color: color-red;
+                border-bottom: none;
+            }
+        }
     }
 
     .post-content img {
@@ -58,11 +76,16 @@
 }
 
 .read-next {
-    border-top: 1px solid color-light-grey;
-    padding: 25px 0 25px 0;
+    padding: 25px 0 50px 0;
+    overflow: hidden;
 
-    & .read-next-story .prev{
-        margin-top: 40px;
+    & .read-next-story{
+        float: left;
+        width: 45%;
+        margin-right: 10%;
+        &.prev {
+            margin-right: 0;
+        }
     }
     &__header {
         font-family: 'Roboto Slab', serif;
@@ -70,16 +93,21 @@
         font-size: 16px;
         line-height: 32px;
         color: color-grey;
+        margin-bottom: 20px;
     }
 
     & .post-title {
         font-family: 'Roboto Slab', serif;
         font-weight: weight-thin;
-        font-size: 32px;
-        line-height: 48px;
+        font-size: 23px;
+        line-height: 32px;
 
         a {
             color: color-red;
+            &:hover {
+                background-color: color-red;
+                color: #fff;
+            }
         }
     }
 

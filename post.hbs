@@ -19,7 +19,8 @@
 {{navigation}}
 </div>
 
-<main class="content" role="main">
+
+<main id="content" class="content" role="main">
     <article class="{{post_class}}">
 
         <header class="post-header">
@@ -28,11 +29,12 @@
             <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
         </header>
         <section class="post-excerpt">
-            <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+            <h1 class="post-title">{{title}}</h1>
         </section>
 
         <section class="post-content">
             {{content}}
+            <time class="post-content__date" datetime="{{date format="YYYY-MM-DD"}}"><span class="post-content__sharp">#</span> {{date format="DD MMMM YYYY"}}</time>
         </section>
 
     </article>
@@ -45,9 +47,7 @@
         {{#next_post}}
         <div class="read-next-story"  href="{{url}}">
             <header class="post-header">
-                <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
                 <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
             </header>
             <section class="post-excerpt">
                 <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
@@ -57,9 +57,7 @@
         {{#prev_post}}
         <div class="read-next-story prev" href="{{url}}">
             <header class="post-header">
-                <time class="post-date--top" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
                 <div class="post-tags">{{tags prefix=" on " separator=" and "}}</div>
-                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">published {{date format="DD MMMM YYYY"}}</time>
             </header>
             <section class="post-excerpt">
                 <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
