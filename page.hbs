@@ -6,21 +6,25 @@
 {{!-- Everything inside the #post tags pulls data from the page --}}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
+{{!-- The big featured header --}}
+<header class="main-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <div class="on-image-logo__wrapper">
+        <img src="{{asset "imgs/emil-cardell-white.svg"}}" class="on-image-logo__image" />
+    </div>
 </header>
+<div class="nav" id="nav">
+    <div class="nav__logo nav__logo--hidden" id="logo" >
+        <img src="{{asset "imgs/emil-cardell-black.svg"}}" />
+    </div>
+{{navigation}}
+</div>
 
-<main class="content" role="main">
+
+<main id="content" class="content" role="main">
     <article class="{{post_class}}">
-
-        <header class="post-header">
+        <section class="post-excerpt">
             <h1 class="post-title">{{title}}</h1>
-        </header>
+        </section>
 
         <section class="post-content">
             {{content}}
@@ -28,4 +32,6 @@
 
     </article>
 </main>
+
+
 {{/post}}

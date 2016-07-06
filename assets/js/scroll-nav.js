@@ -30,7 +30,7 @@ setInterval(function() {
 
 function hasScrolled() {
   var currentPosition = window.pageYOffset;
-  console.log(lastScrollPostion - currentPosition);
+  //console.log(lastScrollPostion - currentPosition);
   if(Math.abs(lastScrollPostion - currentPosition) <= delta) {
       lastScrollPostion = currentPosition;
       return;
