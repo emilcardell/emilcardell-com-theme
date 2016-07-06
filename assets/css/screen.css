@@ -1292,67 +1292,6 @@ body.nav-opened .site-wrapper {
         font-size: 1.6rem;
     }
 
-    h1, h2, h3,
-    h4, h5, h6 {
-        margin: 0 0 0.3em 0;
-    }
-
-    h1 {
-        font-size: 2.8rem;
-        letter-spacing: -1px;
-    }
-
-    h2 {
-        font-size: 2.4rem;
-        letter-spacing: 0;
-    }
-
-    h3 {
-        font-size: 2.1rem;
-    }
-
-    h4 {
-        font-size: 1.9rem;
-    }
-
-    h5 {
-        font-size: 1.8rem;
-    }
-
-    h6 {
-        font-size: 1.8rem;
-    }
-
-    body:not(.post-template) .post-title {
-        font-size: 2.5rem;
-    }
-
-    .post-template .site-footer {
-        margin-top: 0;
-    }
-
-    .post-content img {
-        padding: 0;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
-    }
-
-    .post-meta {
-        font-size: 1.3rem;
-        margin-top: 1rem;
-    }
-
-    .author-meta li {
-        float: none;
-        margin: 0;
-        line-height: 1.75em;
-    }
-
-    .author-meta li:before {
-        display: none;
-    }
-
     .older-posts,
     .newer-posts {
         position: static;

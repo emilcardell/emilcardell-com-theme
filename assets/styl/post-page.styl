@@ -76,13 +76,28 @@
 .read-next {
     padding: 25px 0 50px 0;
     overflow: hidden;
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+    @media only screen and (max-width: 500px) {
+        margin: 0 20px;
+    }
 
     & .read-next-story{
         float: left;
         width: 45%;
         margin-right: 10%;
+        @media only screen and (max-width: 500px) {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
         &.prev {
             margin-right: 0;
+            @media only screen and (max-width: 500px) {
+                margin-bottom: 0;
+            }
         }
     }
     &__header {
@@ -92,6 +107,13 @@
         line-height: 32px;
         color: color-grey;
         margin-bottom: 20px;
+
+    }
+
+    & .post-header {
+        @media only screen and (max-width: 500px) {
+            margin-bottom: 0;
+        }
     }
 
     & .post-title {
@@ -107,10 +129,10 @@
 
     & .post {
         position: relative;
-        width: 80%;
+        width: 96%;
         max-width: 520px;
         margin: 20px auto 0 auto;
-        padding-bottom: 4rem;
+        padding-bottom: 40px;
         word-wrap: break-word;
     }
 
