@@ -70,18 +70,25 @@
 
 .main-header {
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
-    padding-bottom: 25%;
+    padding-bottom: 30%;
+    position: relative;
+    background-position: top center;
+
+    @media only screen and (max-width: 500px) {
+      padding-bottom: 40%;
+    }
 
     & .on-image-logo {
         &__wrapper {
-            position: relative;
+            position: absolute;
             left: 50px;
-            bottom: -343px;
+            bottom: 10px;
             @media only screen and (max-width: 500px) {
-                left: 0;
-                bottom: -173px;
+              text-align: center;
+              width: 100%;
+              left: 0;
             }
         }
 
